@@ -2,40 +2,39 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>OMAR Eto - فريق كامل بدون صور</title>
+<title>OMAR Eto - تشكيل الفريق</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>🔥 OMAR Eto - فريق كامل ضد AI 🔥</h1>
-
-<div id="timer">04:00</div>
-
-<div class="scoreboard">
-  <div>🔴 أنت: <span id="playerScore">0</span></div>
-  <div>🔵 AI: <span id="aiScore">0</span></div>
+<h1>OMAR Eto - حدد مركزك</h1>
+<div id="field">
+  <div id="omar-name">OMAR Eto</div>
 </div>
 
-<div class="field" id="field">
-  <div class="goal goal-left"></div>
-  <div class="goal goal-right"></div>
+<div id="players">
+  <div class="player-choice">
+    <label>أحمد:</label>
+    <select class="position-select" data-player="Ahmed">
+      <option value="GK">حارس مرمى</option>
+      <option value="DF">مدافع</option>
+      <option value="MF">وسط</option>
+      <option value="FW">مهاجم</option>
+    </select>
+    <button onclick="setPosition(this)">تأكيد</button>
+  </div>
+  
+  <div class="player-choice">
+    <label>محمد:</label>
+    <select class="position-select" data-player="Mohamed">
+      <option value="GK">حارس مرمى</option>
+      <option value="DF">مدافع</option>
+      <option value="MF">وسط</option>
+      <option value="FW">مهاجم</option>
+    </select>
+    <button onclick="setPosition(this)">تأكيد</button>
+  </div>
 
-  <!-- فريقك -->
-  <div class="player" id="player1" data-name="Ronaldo"></div>
-  <div class="player" id="player2" data-name="Messi"></div>
-  <div class="player" id="player3" data-name="Neymar"></div>
-
-  <!-- فريق AI -->
-  <div class="ai" id="ai1" data-name="AI1"></div>
-  <div class="ai" id="ai2" data-name="AI2"></div>
-  <div class="ai" id="ai3" data-name="AI3"></div>
-
-  <div class="ball" id="ball"></div>
-</div>
-
-<div class="buttons">
-  <button onclick="startMatch()">ابدأ ماتش</button>
-  <button onclick="resetGame()">Reset</button>
+  <!-- ممكن تضيف صحابك زيادة بنفس الطريقة -->
 </div>
 
 <script src="script.js"></script>
